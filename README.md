@@ -32,3 +32,39 @@
 
 
 ## Updating private ip addresses of the servers in Route53
+
+![image](https://user-images.githubusercontent.com/96833570/211204890-a88a7525-db8c-4316-b738-2015a42642d8.png)
+
+
+## Building the artifact locally
+
+Now build the artifact locally and store it in S3 bucket. Then we will download this to our tomcat app server.
+
+
+`choco install jdk8`
+
+`choco install maven -y`
+
+`choco install awscli -y`
+
+### Configuring aws cli/iam user
+
+Credentials are important. 
+I deleted these users and creds after completion of these projects. 
+Please don't expose your credentials on your repos or anywhere public. 
+
+
+![image](https://user-images.githubusercontent.com/96833570/211206531-684484ef-914e-4329-b903-4f8683c4a961.png)
+
+
+
+`mvn install`
+
+
+Let's create a bucket and copy our artifact:
+
+```
+aws s3 mb s3://devops-projects-artifact-st
+aws s3 cp vprofile-v2.war s3://devops-projects-artifact-st/vprofile-v2.war
+
+```
