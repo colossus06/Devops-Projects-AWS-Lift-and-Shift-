@@ -2,7 +2,8 @@
 
 ## BACKEND STACK SETUP
 
-![image](https://user-images.githubusercontent.com/96833570/211188261-eea8c42b-8046-45d8-9568-da55314393e9.png)
+
+![image](https://user-images.githubusercontent.com/96833570/211214592-65776762-545c-47de-a8b9-b8a505beacc1.png)
 
 
 
@@ -71,3 +72,47 @@ aws s3 mb s3://devops-projects-artifact-st
 aws s3 cp vprofile-v2.war s3://devops-projects-artifact-st/vprofile-v2.war
 
 ```
+
+### Creating and attaching an IAM role for tomcat app service
+
+We want to able to download the war file on our app server. 
+
+
+![image](https://user-images.githubusercontent.com/96833570/211214669-bb1022bf-2d21-4192-8180-2a06ad478a76.png)
+
+![image](https://user-images.githubusercontent.com/96833570/211214687-53e13359-36a6-4bea-9d74-ee668b3677e3.png)
+
+## Setup App Server
+
+We need to delete default app on tomcat8 and download our war file from s3.
+
+![image](https://user-images.githubusercontent.com/96833570/211214822-adc3793b-1bf5-439c-a95a-a0e7981ef7e8.png)
+
+```
+sudo -i
+apt install awscli -y
+systemctl stop tomcat
+cd /var/lib/tomcat8/webapps/
+rm -rf ROOT
+aws s3 ls
+aws s3 cp s3://devops-projects-artifact-st/devops-project.war /tmp/
+cd /tmp/
+cp devops-project.war /var/lib/tomcat8/webapps/ROOT.war
+systemctl start tomcat8
+cd /var/lib/tomcat8/webapps/ROOT/WEB-INF/classes
+cat application.properties
+```
+
+We can check db connection via telnet:
+
+![image](https://user-images.githubusercontent.com/96833570/211215351-c9110bb4-222a-4652-9bce-7c0b21faf313.png)
+
+
+
+
+<hr>
+
+## Setup load balancer
+
+
+
