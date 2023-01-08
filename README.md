@@ -36,6 +36,9 @@
 ![image](https://user-images.githubusercontent.com/96833570/211204890-a88a7525-db8c-4316-b738-2015a42642d8.png)
 
 
+![image](https://user-images.githubusercontent.com/96833570/211213304-22002b86-19b1-4465-a076-13f6f167ade8.png)
+
+
 ## Building the artifact locally
 
 Now build the artifact locally and store it in S3 bucket. Then we will download this to our tomcat app server.
