@@ -51,7 +51,7 @@ Now build the artifact locally and store it in S3 bucket. Then we will download 
 
 `choco install awscli -y`
 
-### Configuring aws cli/iam user
+### Configuring aws cli/iam user with full s3 access
 
 Credentials are important. 
 I deleted these users and creds after completion of these projects. 
