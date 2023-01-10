@@ -139,5 +139,9 @@ We can check db connection via telnet:
 
 
 
-https://user-images.githubusercontent.com/96833570/211548783-a74a8d15-339b-4a87-b140-81dc87c90e88.mp4
+https://user-images.githubusercontent.com/96833570/211554501-9cd28d3a-7cd1-4161-bd08-90f5e8954534.mp4
+
+
+
+
 
