@@ -127,7 +127,7 @@ We can check db connection via telnet:
 
 ## Setup load balancer and target groups
 
-![image](https://user-images.githubusercontent.com/96833570/211541794-8d7192ee-731b-4583-bb05-2c4ba8dbcd40.png)
+![image](https://user-images.githubusercontent.com/96833570/211546007-e20a6c56-4d28-4644-86ca-cf83908e3acd.png)
 
 
 
@@ -136,4 +136,8 @@ We can check db connection via telnet:
 
 
 
+
+
+
+https://user-images.githubusercontent.com/96833570/211548783-a74a8d15-339b-4a87-b140-81dc87c90e88.mp4
 
