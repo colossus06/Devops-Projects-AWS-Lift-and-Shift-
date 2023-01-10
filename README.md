@@ -1,5 +1,11 @@
 # Devops-Projects-3-AWS-Lift-and-Shift
 
+
+![image](https://user-images.githubusercontent.com/96833570/211544752-3a0a22db-c310-42ec-8e87-a627181fdc04.png)
+
+
+
+
 ## BACKEND STACK SETUP
 
 
@@ -84,6 +90,13 @@ We want to able to download the war file on our app server.
 
 ## Setup App Server
 
+`curl http://169.254.169.254/latest/user-data`
+
+![image](https://user-images.githubusercontent.com/96833570/211541247-ac0a48b5-c85a-4aa1-a338-386fa545425b.png)
+
+![image](https://user-images.githubusercontent.com/96833570/211541319-f8ab2e42-12b6-492f-a9d0-fd88fe369a3e.png)
+
+
 We need to delete default app on tomcat8 and download our war file from s3.
 
 ![image](https://user-images.githubusercontent.com/96833570/211214822-adc3793b-1bf5-439c-a95a-a0e7981ef7e8.png)
@@ -112,7 +125,15 @@ We can check db connection via telnet:
 
 <hr>
 
-## Setup load balancer
+## Setup load balancer and target groups
+
+![image](https://user-images.githubusercontent.com/96833570/211541794-8d7192ee-731b-4583-bb05-2c4ba8dbcd40.png)
+
+
+
+
+## Validation
+
 
 
 
